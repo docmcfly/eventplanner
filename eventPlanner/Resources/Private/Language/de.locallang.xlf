@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
+		<header/>
+		<body>
+	
+			<trans-unit id="eventplanner.description">
+				<source>Description</source>
+				<target state="tanslated">Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="eventplanner.registerEnd">
+				<source>End of registration</source>
+				<target state="tanslated">Anmeldeschluss</target>
+			</trans-unit>
+
+			<trans-unit id="eventplanner.place.maxMembers">
+				<source>Max members</source>
+				<target state="tanslated">Maximale Anzahl an Helfern</target>
+			</trans-unit>
+			<trans-unit id="eventplanner.place.addMember">
+				<source>I'm in</source>
+				<target state="tanslated">Ich bin dabei</target>
+			</trans-unit>
+			<trans-unit id="eventplanner.place.removeMember">
+				<source>I'm afraid I'm not in</source>
+				<target state="tanslated">Ich bin leider nicht dabei</target>
+			</trans-unit>
+
+			<trans-unit id="eventplanner.error.eventNotFound">
+				<source>Event not found.</source>
+				<target state="tanslated">Veranstaltung nicht gefunden.</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

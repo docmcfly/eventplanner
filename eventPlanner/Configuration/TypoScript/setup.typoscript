@@ -1,0 +1,28 @@
+plugin.tx_eventplanner {
+	view {
+		templateRootPaths {
+			0 = EXT:eventplanner/Resources/Private/Templates/
+			1 = {$plugin.tx_eventplanner.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = EXT:eventplanner/Resources/Private/Partials/
+			1 = {$plugin.tx_eventplanner.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = EXT:eventplanner/Resources/Private/Layouts/
+			1 = {$plugin.tx_eventplanner.view.layoutRootPath}
+		}
+
+	}
+}
+	
+config.tx_extbase.persistence.classes {
+ Tx_Extbase_Domain_Model_FrontendUser {
+  mapping.recordType >
+ }
+}
+
+ 
+

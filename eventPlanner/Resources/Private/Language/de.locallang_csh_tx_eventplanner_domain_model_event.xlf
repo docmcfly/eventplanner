@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Event name</source>
+				<target state="tanslated">Name der Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="name">
+				<source>Event name</source>
+				<target state="tanslated">Name der Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description</source>
+				<target state="tanslated">Beschreibung der Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="eventCoordinator">
+				<source>Event coordinator</source>
+				<target state="tanslated">Veranstaltungsplaner</target>
+			</trans-unit>
+			<trans-unit id="registerEnd">
+				<source>Register end time</source>
+				<target state="tanslated">Anmeldeschluss</target>
+			</trans-unit>
+			<trans-unit id="placeOfWork">
+				<source>Place of work</source>
+				<target state="tanslated">Einsatzort</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
