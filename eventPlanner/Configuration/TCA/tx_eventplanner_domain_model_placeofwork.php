@@ -13,16 +13,18 @@ return [
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
         'enablecolumns' => [
-            'disabled' => 'hidden',
+            'disabled' => 'hidden'
         ],
         'searchFields' => 'name',
         'iconfile' => 'EXT:eventplanner/Resources/Public/Icons/tx_eventplanner_domain_model_placeofwork.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, max_members, members',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, max_members, members'
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, max_members, members'],
+        '1' => [
+            'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, max_members, members'
+        ]
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -35,12 +37,12 @@ return [
                 'items' => [
                     [
                         'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                        -1,
+                        - 1,
                         'flags-multiple'
                     ]
                 ],
-                'default' => 0,
-            ],
+                'default' => 0
+            ]
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
@@ -51,24 +53,27 @@ return [
                 'renderType' => 'selectSingle',
                 'default' => 0,
                 'items' => [
-                    ['', 0],
+                    [
+                        '',
+                        0
+                    ]
                 ],
                 'foreign_table' => 'tx_eventplanner_domain_model_placeofwork',
-                'foreign_table_where' => 'AND {#tx_eventplanner_domain_model_placeofwork}.{#pid}=###CURRENT_PID### AND {#tx_eventplanner_domain_model_placeofwork}.{#sys_language_uid} IN (-1,0)',
-            ],
+                'foreign_table_where' => 'AND {#tx_eventplanner_domain_model_placeofwork}.{#pid}=###CURRENT_PID### AND {#tx_eventplanner_domain_model_placeofwork}.{#sys_language_uid} IN (-1,0)'
+            ]
         ],
         'l10n_diffsource' => [
             'config' => [
-                'type' => 'passthrough',
-            ],
+                'type' => 'passthrough'
+            ]
         ],
         't3ver_label' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.versionLabel',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'max' => 255,
-            ],
+                'max' => 255
+            ]
         ],
         'hidden' => [
             'exclude' => true,
@@ -82,8 +87,8 @@ return [
                         1 => '',
                         'invertStateDisplay' => true
                     ]
-                ],
-            ],
+                ]
+            ]
         ],
 
         'name' => [
@@ -93,7 +98,7 @@ return [
                 'type' => 'input',
                 'size' => 30,
                 'eval' => 'trim'
-            ],
+            ]
         ],
         'max_members' => [
             'exclude' => false,
@@ -111,15 +116,14 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'fe_users',
-                'MM' => 'tx_eventplanner_placeofwork_frontenduser_mm',
-            ],
-            
+                'MM' => 'tx_eventplanner_placeofwork_frontenduser_mm'
+            ]
         ],
-    
+
         'event' => [
             'config' => [
-                'type' => 'passthrough',
-            ],
-        ],
-    ],
+                'type' => 'passthrough'
+            ]
+        ]
+    ]
 ];

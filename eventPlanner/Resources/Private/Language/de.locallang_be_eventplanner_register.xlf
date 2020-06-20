@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
-		<header/>
+	<file source-language="en" datatype="plaintext"
+		original="messages" date="2019-11-17T16:38:48Z"
+		product-name="eventplanner">
+		<header />
 		<body>
 
 			<trans-unit id="tx_eventplanner_register.name">
@@ -10,7 +12,8 @@
 			</trans-unit>
 			<trans-unit id="tx_eventplanner_register.description">
 				<source>Frontend users can register for job of the event.</source>
-				<target state="tanslated">Webseitennutzer können sich für Jobs einer Veranstaltung registrieren.</target>
+				<target state="tanslated">Webseitennutzer können sich für Jobs einer
+					Veranstaltung registrieren.</target>
 			</trans-unit>
 
 

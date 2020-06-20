@@ -9,7 +9,6 @@
  * Only the data in the array - anything else is removed by next write.
  * "version" and "dependencies" must not be touched!
  ***************************************************************/
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Event Planner',
     'description' => 'You can organize helper for your event. Plan places of work and the front end users can register for it.',
@@ -23,9 +22,9 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.4.0-10.4.99',
+            'typo3' => '10.4.0-10.4.99'
         ],
         'conflicts' => [],
-        'suggests' => [],
-    ],
+        'suggests' => []
+    ]
 ];

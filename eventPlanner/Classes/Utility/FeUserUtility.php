@@ -46,19 +46,24 @@ class FeUserUtility implements SingletonInterface
         return $this->frontendUserRepository->findByUid(FeUserUtility::getCurrentUserUid());
     }
 
+    /**
+     * 
+     * @throws \Exception
+     * @return Integer Returns the UID of the current frontend user. 
+     */
     public function getCurrentUserUid()
     {
         if (! $this->isLogged()) {
             throw new \Exception("User ist not logged");
         }
         $context = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
-        return $context->getPropertyFromAspect('frontend.user', 'id');
+        return (Integer) $context->getPropertyFromAspect('frontend.user', 'id');
     }
 
     /**
      * Check if the user is logged
      *
-     * @return bool
+     * @return bool Returns true if the user is logged.
      */
     public function isLogged()
     {
