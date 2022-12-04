@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-04-26T10:33:58Z" product-name="eventplanner">
+		<header/>
+		<body>
+				
+			<trans-unit id="eventplanner.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="eventplanner.registerEnd">
+				<source>End of registration</source>
+			</trans-unit>
+
+			<trans-unit id="eventplanner.place.maxMembers">
+				<source>Max members</source>
+			</trans-unit>
+			<trans-unit id="eventplanner.place.addMember">
+				<source>I'm in</source>
+			</trans-unit>
+			<trans-unit id="eventplanner.place.removeMember">
+				<source>I'm afraid I'm not in</source>
+			</trans-unit>
+
+			<trans-unit id="eventplanner.error.eventNotFound">
+				<source>Event not found.</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>
