@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//WC//DTD XHTML . Strict//EN" 	"http://www.w.org/TR/xhtml/DTD/xhtml-strict.dtd">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" xmlns="http://www.w.org//xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+	<f:layout name="Default" />
+	<f:section name="content">
+		<f:render partial="validationResults" arguments="{prefix:'eventplaner', validationResults: validationResults}" />
+		<f:variable name="errorsCount">{messages.errors -> f:count()}</f:variable>
+		<f:if condition="{errorsCount} == 0">
+			<f:then>
+				<h2>{event.name}</h2>
+				<h5>
+					<f:translate key="eventplanner.registerEnd" />
+					:
+					<f:format.date format="d.m.Y">{event.registerEnd}</f:format.date>
+				</h5>
+				<f:format.html>{event.description}</f:format.html>
+				<hr>
+				<f:for each="{event.placeOfWork}" as="place">
+					<ul class="list-group">
+						<li class="list-group-item  d-flex justify-content-between align-items-center">
+							<h3>{place.name}</h3> <span class="badge badge-primary badge-pill"><f:translate key="eventplanner.place.maxMembers" /> : {place.maxMembers}</span>
+						</li>
+						<f:for each="{place.members}" as="member">
+							<li class="list-group-item"><f:if condition="{member.firstName}">
+									<f:then>
+										{member.firstName} {member.lastName} 
+									</f:then>
+									<f:else>
+										{member.username}
+									</f:else>
+								</f:if></li>
+						</f:for>
+					</ul>
+					<f:if condition="{registerActive} && ({userIsRegisteredIn.{place.uid}} !== {place.uid}) && ({place.members->f:count()} < {place.maxMembers})">
+						<f:then>
+							<li class="list-group-item"><f:form action="registerUser" controller="Event" name="placeOfWork" object="{place}">
+									<f:form.button class="btn btn-outline-primary btn-lg btn-block" formmethod="post">
+										<f:translate key="eventplanner.place.addMember" />
+									</f:form.button>
+								</f:form></li>
+						</f:then>
+					</f:if>
+					<f:if condition="{registerActive} && {userIsRegisteredIn.{place.uid}} === {place.uid}">
+						<f:then>
+							<li class="list-group-item"><f:form action="deregisterUser" controller="Event" name="placeOfWork" object="{place}">
+									<f:form.button class="btn btn-lg btn-outline-primary btn-block" formmethod="post">
+										<f:translate key="eventplanner.place.removeMember" />
+									</f:form.button>
+								</f:form></li>
+						</f:then>
+					</f:if>
+					</ul>
+					<br>
+					<br>
+					</fieldset>
+				</f:for>
+			</f:then>
+		</f:if>
+	</f:section>
+</body>
+</html>
