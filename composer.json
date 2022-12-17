@@ -1,8 +1,14 @@
 {
 	"name" : "cylancer/eventplanner",
 	"type" : "typo3-cms-extension",
-	"description" : "With this simple frontend tool the frontend users can organize the event.",
-	"license" : "GPL-2.0-or-later",
+	"authors" : [{
+			"name" : "Clemens Gogolin",
+			"role" : "Developer"
+		}, {
+			"name" : "Clemens Gogolin",
+			"role" : "Developer"
+		}
+	],
 	"require" : {
 		"typo3/cms-core" : "^11.5"
 	},
@@ -11,20 +17,13 @@
 			"Cylancer\\Eventplanner\\" : "Classes"
 		}
 	},
-	"authors" : [{
-			"name" : "Clemens Gogolin",
-			"email" : "service@cylancer.net",
-			"role" : "developer",
-			"homepage" : "https://github.com/docmcfly/eventplanner"
+	"autoload-dev" : {
+		"psr-4" : {
+			"Cylancer\\Eventplanner\\Tests\\" : "Tests"
 		}
-	],
-	"support" : {
-		"issues" : "https://github.com/docmcfly/eventplanner/issues",
-		"source" : "https://github.com/docmcfly/eventplanner"
 	},
-	"extra" : {
-		"typo3/cms" : {
-			"extension-key" : "eventplanner"
-		}
+	"replace" : {
+		"cylancer/eventplanner" : "self.version",
+		"typo3-ter/eventplanner" : "self.version"
 	}
 }
