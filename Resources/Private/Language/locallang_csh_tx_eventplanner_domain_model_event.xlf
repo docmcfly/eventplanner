@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Event name</source>
+				<source>Event plan</source>
 			</trans-unit>
 			<trans-unit id="name">
-				<source>Event name</source>
+				<source>Event plan</source>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>Description</source>

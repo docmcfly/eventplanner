@@ -4,12 +4,12 @@
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Event name</source>
-				<target state="tanslated">Name der Veranstaltung</target>
+				<source>Event plan</source>
+				<target state="tanslated">Veranstaltungsplaung</target>
 			</trans-unit>
 			<trans-unit id="name">
-				<source>Event name</source>
-				<target state="tanslated">Name der Veranstaltung</target>
+				<source>Event plan</source>
+				<target state="tanslated">Veranstaltungsplaung</target>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>Description</source>
