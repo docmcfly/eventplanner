@@ -19,9 +19,9 @@
 				<f:format.html>{event.description}</f:format.html>
 				<hr>
 				<f:for each="{event.placeOfWork}" as="place">
-					<ul class="list-group">
+					<ul class="list-group mb-4">
 						<li class="list-group-item  d-flex justify-content-between align-items-center">
-							<h3>{place.name}</h3> <span class="badge badge-primary badge-pill"><f:translate key="eventplanner.place.maxMembers" /> : {place.maxMembers}</span>
+							<h3><strong>{place.name}</strong></h3> <span class="badge bg-primary"><f:translate key="eventplanner.place.maxMembers" /> : {place.maxMembers}</span>
 						</li>
 						<f:for each="{place.members}" as="member">
 							<li class="list-group-item"><f:if condition="{member.firstName}">
@@ -33,11 +33,10 @@
 									</f:else>
 								</f:if></li>
 						</f:for>
-					</ul>
 					<f:if condition="{registerActive} && ({userIsRegisteredIn.{place.uid}} !== {place.uid}) && ({place.members->f:count()} < {place.maxMembers})">
 						<f:then>
 							<li class="list-group-item"><f:form action="registerUser" controller="Event" name="placeOfWork" object="{place}">
-									<f:form.button class="btn btn-outline-primary btn-lg btn-block" formmethod="post">
+									<f:form.button class="btn btn-outline-primary btn-lg btn-block mt-3" formmethod="post">
 										<f:translate key="eventplanner.place.addMember" />
 									</f:form.button>
 								</f:form></li>
@@ -46,16 +45,13 @@
 					<f:if condition="{registerActive} && {userIsRegisteredIn.{place.uid}} === {place.uid}">
 						<f:then>
 							<li class="list-group-item"><f:form action="deregisterUser" controller="Event" name="placeOfWork" object="{place}">
-									<f:form.button class="btn btn-lg btn-outline-primary btn-block" formmethod="post">
+									<f:form.button class="btn btn-lg btn-outline-primary btn-block mt-3" formmethod="post">
 										<f:translate key="eventplanner.place.removeMember" />
 									</f:form.button>
 								</f:form></li>
 						</f:then>
 					</f:if>
 					</ul>
-					<br>
-					<br>
-					</fieldset>
 				</f:for>
 			</f:then>
 		</f:if>
