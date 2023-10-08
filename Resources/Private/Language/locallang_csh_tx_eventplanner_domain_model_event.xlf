@@ -3,9 +3,6 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
 		<header/>
 		<body>
-			<trans-unit id="title">
-				<source>Event plan</source>
-			</trans-unit>
 			<trans-unit id="name">
 				<source>Event plan</source>
 			</trans-unit>
@@ -20,6 +17,12 @@
 			</trans-unit>
 			<trans-unit id="placeOfWork">
 				<source>Place of work</source>
+			</trans-unit>
+			<trans-unit id="maxVotes">
+				<source>Maximum of votes (0 = unlimitetd)</source>
+			</trans-unit>
+			<trans-unit id="displayNames">
+				<source>Display the name</source>
 			</trans-unit>
 		</body>
 	</file>

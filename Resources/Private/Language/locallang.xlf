@@ -11,6 +11,9 @@
 				<source>End of registration</source>
 			</trans-unit>
 
+			<trans-unit id="eventplanner.place.memberCount">
+				<source>Members count</source>
+			</trans-unit>
 			<trans-unit id="eventplanner.place.maxMembers">
 				<source>Max members</source>
 			</trans-unit>

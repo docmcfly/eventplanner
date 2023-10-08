@@ -8,7 +8,8 @@ CREATE TABLE tx_eventplanner_domain_model_event (
 	register_end date DEFAULT NULL,
 	event_coordinator int(11) unsigned DEFAULT '0',
 	place_of_work int(11) unsigned DEFAULT '0' NOT NULL,
-
+	max_votes smallint(5) unsigned DEFAULT '0' NOT NULL,
+	display_names smallint(5) unsigned DEFAULT '1' NOT NULL,
 );
 
 #

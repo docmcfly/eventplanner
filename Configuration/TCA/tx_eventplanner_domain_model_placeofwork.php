@@ -102,7 +102,8 @@ return [
                 'type' => 'input',
                 'size' => 4,
                 'eval' => 'int, required'
-            ]
+            ],
+            'default' => 99,
         ],
         'members' => [
             'exclude' => true,

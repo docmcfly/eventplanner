@@ -8,11 +8,19 @@
 				<source>Description</source>
 				<target state="tanslated">Beschreibung</target>
 			</trans-unit>
+			<trans-unit id="eventplanner.maxVotes">
+				<source>Maximum votes</source>
+				<target state="tanslated">Maximale Stimmenanzahl</target>
+			</trans-unit>
 			<trans-unit id="eventplanner.registerEnd">
 				<source>End of registration</source>
 				<target state="tanslated">Anmeldeschluss</target>
 			</trans-unit>
 
+			<trans-unit id="eventplanner.place.memberCount">
+				<source>Members count</source>
+				<target state="tanslated">Anzahl</target>
+			</trans-unit>
 			<trans-unit id="eventplanner.place.maxMembers">
 				<source>Max members</source>
 				<target state="tanslated">Maximale Personen-Anzahl</target>

@@ -8,7 +8,7 @@ namespace Cylancer\Eventplanner\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022 Clemens Gogolin <service@cylancer.net>
+ *  (c) 2023 Clemens Gogolin <service@cylancer.net>
  *
  *  
  *  @package Cylancer\Eventplanner\Domain\Model
@@ -21,44 +21,46 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Event extends AbstractEntity
 {
 
+    const UNLIMITED_VOTES = 0;
+
     /**
-     * name
-     * 
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $name = '';
 
     /**
-     * description
-     * 
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $description = '';
 
     /**
-     * registerEnd
-     * 
      * @var \DateTime
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $registerEnd = null;
 
     /**
-     * eventCoordinator
-     * 
      * @var FrontendUser
      */
     protected $eventCoordinator = null;
 
     /**
-     * placeOfWork
-     * 
      * @var ObjectStorage<PlaceOfWork>
      * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $placeOfWork = null;
+
+    /**
+     * @var int
+     */
+    protected $maxVotes;
+
+    /**
+     * @var bool
+     */
+    protected $displayNames;
 
     /**
      * __construct
@@ -84,8 +86,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Returns the name
-     * 
      * @return string name
      */
     public function getName():String
@@ -94,8 +94,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Sets the name
-     * 
      * @param string $name
      * @return void
      */
@@ -105,8 +103,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Returns the description
-     * 
      * @return string description
      */
     public function getDescription():String
@@ -115,8 +111,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Sets the description
-     * 
      * @param string $description
      * @return void
      */
@@ -126,8 +120,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Returns the eventCoordinator
-     * 
      * @return FrontendUser eventCoordinator
      */
     public function getEventCoordinator() :FrontendUser
@@ -136,8 +128,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Sets the eventCoordinator
-     * 
      * @param FrontendUser $eventCoordinator
      * @return void
      */
@@ -147,8 +137,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Returns the registerEnd
-     * 
      * @return \DateTime $registerEnd
      */
     public function getRegisterEnd():\DateTime
@@ -157,8 +145,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Sets the registerEnd
-     * 
      * @param \DateTime $registerEnd
      * @return void
      */
@@ -168,8 +154,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Adds a PlaceOfWork
-     * 
      * @param PlaceOfWork $placeOfWork
      * @return void
      */
@@ -179,8 +163,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Removes a PlaceOfWork
-     * 
      * @param PlaceOfWork $placeOfWorkToRemove The PlaceOfWork to be removed
      * @return void
      */
@@ -190,8 +172,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Returns the placeOfWork
-     * 
      * @return ObjectStorage<PlaceOfWork> $placeOfWork
      */
     public function getPlaceOfWork():ObjectStorage
@@ -200,8 +180,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Sets the placeOfWork
-     * 
      * @param ObjectStorage<PlaceOfWork> $placeOfWork
      * @return void
      */
@@ -209,4 +187,40 @@ class Event extends AbstractEntity
     {
         $this->placeOfWork = $placeOfWork;
     }
+
+	/**
+	 * 
+	 * @return int
+	 */
+	public function getMaxVotes() {
+		return $this->maxVotes;
+	}
+	
+	/**
+	 * 
+	 * @param int $maxVotes 
+	 * @return self
+	 */
+	public function setMaxVotes($maxVotes): self {
+		$this->maxVotes = $maxVotes;
+		return $this;
+	}
+
+	/**
+	 * 
+	 * @return bool
+	 */
+	public function getDisplayNames() {
+		return $this->displayNames;
+	}
+	
+	/**
+	 * 
+	 * @param bool $displayNames 
+	 * @return self
+	 */
+	public function setDisplayNames($displayNames): self {
+		$this->displayNames = $displayNames;
+		return $this;
+	}
 }
