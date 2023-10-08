@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.1.0',
+    'version' => '2.2.0',
     'constraints' => [
         'depends' => [
             'typo3' => '11.5.10-11.5.99',
@@ -25,6 +25,8 @@ $EM_CONF[$_EXTKEY] = [
 ];
 
 /**
+ *  2.2.0 :: Add :: You can do hidden votes. You can limit the vote per user.
+ *  2.1.1 :: Rmv :: Remove the redundant event name: it is better you use the headline for the front end. 
  *  2.1.0 :: Fix :: Fix the plugin configuration / registration
  *  2.0.8 :: Fix :: Change the max members translation. 
  *  2.0.7 :: Fix :: Make maximal members field visible. 

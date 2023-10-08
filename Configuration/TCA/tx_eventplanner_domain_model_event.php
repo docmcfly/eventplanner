@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:eventplanner/Resources/Public/Icons/tx_eventplanner_domain_model_event.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, register_end, event_coordinator, place_of_work',
+        'showRecordFieldList' => ' l10n_parent, l10n_diffsource, hidden, name, description, register_end, event_coordinator, max_votes, display_names, place_of_work',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, register_end, event_coordinator, place_of_work, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, register_end, event_coordinator,  max_votes, display_names, place_of_work, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -124,6 +124,29 @@ return [
                 'size' => 30,
                 'eval' => 'trim,required'
             ],
+        ],
+        'max_votes' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_csh_tx_eventplanner_domain_model_event.xlf:maxVotes',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int, required'
+            ]
+        ],
+        'display_names' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_csh_tx_eventplanner_domain_model_event.xlf:displayNames',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                   [
+                      0 => '',
+                      1 => '',
+                   ]
+                ],
+            ]
         ],
         'description' => [
             'exclude' => false,
