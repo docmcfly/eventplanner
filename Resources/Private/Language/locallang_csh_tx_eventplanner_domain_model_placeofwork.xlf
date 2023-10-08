@@ -10,7 +10,7 @@
 				<source>Place of work</source>
 			</trans-unit>
 			<trans-unit id="maxMembers">
-				<source>Maximum of members</source>
+				<source>Maximum of members (0 = no limit)</source>
 			</trans-unit>
 			<trans-unit id="members">
 				<source>Members</source>

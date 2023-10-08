@@ -12,8 +12,8 @@
 				<target state="tanslated">Einsatzort</target>
 			</trans-unit>
 			<trans-unit id="maxMembers">
-				<source>Maximum of members</source>
-				<target state="tanslated">Maximale Anzahl an Helfern</target>
+				<source>Maximum of members (0 = no limit)</source>
+				<target state="tanslated">Maximale Anzahl an Helfern (0 = keine Limitierung)</target>
 			</trans-unit>
 			<trans-unit id="members">
 				<source>Members</source>

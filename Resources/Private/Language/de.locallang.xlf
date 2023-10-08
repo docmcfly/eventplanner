@@ -21,10 +21,6 @@
 				<source>Members count</source>
 				<target state="tanslated">Anzahl</target>
 			</trans-unit>
-			<trans-unit id="eventplanner.place.maxMembers">
-				<source>Max members</source>
-				<target state="tanslated">Maximale Personen-Anzahl</target>
-			</trans-unit>
 			<trans-unit id="eventplanner.place.addMember">
 				<source>I'm in</source>
 				<target state="tanslated">Ich bin dabei</target>
