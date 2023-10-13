@@ -138,7 +138,7 @@ class EventController extends ActionController
         }
     }
 
-    private function validate(Event $event): ValidationResults
+    private function validate(?Event $event): ValidationResults
     {
         /** @var ValidationResults $validationResults */
         $validationResults = new ValidationResults();
