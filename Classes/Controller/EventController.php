@@ -120,6 +120,7 @@ class EventController extends ActionController
             $this->view->assign('validationResults', $validationResults);
         } else {
             $this->view->assign('event', $event);
+           //  debug($event);
             $userIsRegisteredIn = array();
             foreach ($event->getPlaceOfWork() as $place) {
                 $members = $place->getMembers();
@@ -137,7 +138,7 @@ class EventController extends ActionController
         }
     }
 
-    private function validate(Event $event): ValidationResults
+    private function validate(?Event $event): ValidationResults
     {
         /** @var ValidationResults $validationResults */
         $validationResults = new ValidationResults();

@@ -101,9 +101,10 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 4,
-                'eval' => 'int, required'
+                'eval' => 'int, required',
+                'default' => '0',
             ],
-            'default' => 99,
+            
         ],
         'members' => [
             'exclude' => true,

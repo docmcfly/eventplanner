@@ -38,6 +38,9 @@ class PlaceOfWork extends AbstractEntity
      */
     protected $members = null;
 
+
+
+
     /**
      * __construct
      */
@@ -66,7 +69,7 @@ class PlaceOfWork extends AbstractEntity
      * 
      * @return string name
      */
-    public function getName():String
+    public function getName(): string
     {
         return $this->name;
     }
@@ -77,7 +80,7 @@ class PlaceOfWork extends AbstractEntity
      * @param string $name
      * @return void
      */
-    public function setName(String $name):void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
@@ -87,7 +90,7 @@ class PlaceOfWork extends AbstractEntity
      * 
      * @return int maxMembers
      */
-    public function getMaxMembers():int
+    public function getMaxMembers(): int
     {
         return $this->maxMembers;
     }
@@ -98,7 +101,7 @@ class PlaceOfWork extends AbstractEntity
      * @param int $maxMembers
      * @return void
      */
-    public function setMaxMembers(int $maxMembers):void
+    public function setMaxMembers(int $maxMembers): void
     {
         $this->maxMembers = $maxMembers;
     }
@@ -109,7 +112,7 @@ class PlaceOfWork extends AbstractEntity
      * @param FrontendUser $member
      * @return void
      */
-    public function addMember(FrontendUser $member):void
+    public function addMember(FrontendUser $member): void
     {
         $this->members->attach($member);
     }
@@ -120,7 +123,7 @@ class PlaceOfWork extends AbstractEntity
      * @param FrontendUser $memberToRemove The FrontendUser to be removed
      * @return void
      */
-    public function removeMember(FrontendUser $memberToRemove):void
+    public function removeMember(FrontendUser $memberToRemove): void
     {
         $this->members->detach($memberToRemove);
     }
@@ -130,19 +133,9 @@ class PlaceOfWork extends AbstractEntity
      * 
      * @return ObjectStorage<FrontendUser> members
      */
-    public function getMembers():ObjectStorage
+    public function getMembers(): ObjectStorage
     {
         return $this->members;
     }
 
-    /**
-     * Sets the members
-     * 
-     * @param ObjectStorage<FrontendUser> $members
-     * @return void
-     */
-    public function setMembers(ObjectStorage $members)
-    {
-        $this->members = $members;
-    }
 }

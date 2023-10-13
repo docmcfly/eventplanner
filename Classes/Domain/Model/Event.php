@@ -62,6 +62,7 @@ class Event extends AbstractEntity
      */
     protected $displayNames;
 
+
     /**
      * __construct
      */
@@ -80,7 +81,7 @@ class Event extends AbstractEntity
      * 
      * @return void
      */
-    protected function initStorageObjects():void
+    protected function initStorageObjects(): void
     {
         $this->placeOfWork = new ObjectStorage();
     }
@@ -88,7 +89,7 @@ class Event extends AbstractEntity
     /**
      * @return string name
      */
-    public function getName():String
+    public function getName(): string
     {
         return $this->name;
     }
@@ -97,7 +98,7 @@ class Event extends AbstractEntity
      * @param string $name
      * @return void
      */
-    public function setName(String $name):void
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
@@ -105,7 +106,7 @@ class Event extends AbstractEntity
     /**
      * @return string description
      */
-    public function getDescription():String
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -114,7 +115,7 @@ class Event extends AbstractEntity
      * @param string $description
      * @return void
      */
-    public function setDescription(String $description):void
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -122,7 +123,7 @@ class Event extends AbstractEntity
     /**
      * @return FrontendUser eventCoordinator
      */
-    public function getEventCoordinator() :FrontendUser
+    public function getEventCoordinator(): FrontendUser
     {
         return $this->eventCoordinator;
     }
@@ -131,7 +132,7 @@ class Event extends AbstractEntity
      * @param FrontendUser $eventCoordinator
      * @return void
      */
-    public function setEventCoordinator(FrontendUser $eventCoordinator):void
+    public function setEventCoordinator(FrontendUser $eventCoordinator): void
     {
         $this->eventCoordinator = $eventCoordinator;
     }
@@ -139,7 +140,7 @@ class Event extends AbstractEntity
     /**
      * @return \DateTime $registerEnd
      */
-    public function getRegisterEnd():\DateTime
+    public function getRegisterEnd(): \DateTime
     {
         return $this->registerEnd;
     }
@@ -148,7 +149,7 @@ class Event extends AbstractEntity
      * @param \DateTime $registerEnd
      * @return void
      */
-    public function setRegisterEnd(\DateTime $registerEnd):void
+    public function setRegisterEnd(\DateTime $registerEnd): void
     {
         $this->registerEnd = $registerEnd;
     }
@@ -157,7 +158,7 @@ class Event extends AbstractEntity
      * @param PlaceOfWork $placeOfWork
      * @return void
      */
-    public function addPlaceOfWork(PlaceOfWork $placeOfWork):void
+    public function addPlaceOfWork(PlaceOfWork $placeOfWork): void
     {
         $this->placeOfWork->attach($placeOfWork);
     }
@@ -166,7 +167,7 @@ class Event extends AbstractEntity
      * @param PlaceOfWork $placeOfWorkToRemove The PlaceOfWork to be removed
      * @return void
      */
-    public function removePlaceOfWork(PlaceOfWork $placeOfWorkToRemove):void
+    public function removePlaceOfWork(PlaceOfWork $placeOfWorkToRemove): void
     {
         $this->placeOfWork->detach($placeOfWorkToRemove);
     }
@@ -174,7 +175,7 @@ class Event extends AbstractEntity
     /**
      * @return ObjectStorage<PlaceOfWork> $placeOfWork
      */
-    public function getPlaceOfWork():ObjectStorage
+    public function getPlaceOfWork(): ObjectStorage
     {
         return $this->placeOfWork;
     }
@@ -183,44 +184,50 @@ class Event extends AbstractEntity
      * @param ObjectStorage<PlaceOfWork> $placeOfWork
      * @return void
      */
-    public function setPlaceOfWork(ObjectStorage $placeOfWork):void
+    public function setPlaceOfWork(ObjectStorage $placeOfWork): void
     {
         $this->placeOfWork = $placeOfWork;
     }
 
-	/**
-	 * 
-	 * @return int
-	 */
-	public function getMaxVotes() {
-		return $this->maxVotes;
-	}
-	
-	/**
-	 * 
-	 * @param int $maxVotes 
-	 * @return self
-	 */
-	public function setMaxVotes($maxVotes): self {
-		$this->maxVotes = $maxVotes;
-		return $this;
-	}
+    /**
+     * 
+     * @return int
+     */
+    public function getMaxVotes()
+    {
+        return $this->maxVotes;
+    }
 
-	/**
-	 * 
-	 * @return bool
-	 */
-	public function getDisplayNames() {
-		return $this->displayNames;
-	}
-	
-	/**
-	 * 
-	 * @param bool $displayNames 
-	 * @return self
-	 */
-	public function setDisplayNames($displayNames): self {
-		$this->displayNames = $displayNames;
-		return $this;
-	}
+    /**
+     * 
+     * @param int $maxVotes 
+     * @return self
+     */
+    public function setMaxVotes($maxVotes): self
+    {
+        $this->maxVotes = $maxVotes;
+        return $this;
+    }
+
+    /**
+     * 
+     * @return bool
+     */
+    public function getDisplayNames()
+    {
+        return $this->displayNames;
+    }
+
+    /**
+     * 
+     * @param bool $displayNames 
+     * @return self
+     */
+    public function setDisplayNames($displayNames): self
+    {
+        $this->displayNames = $displayNames;
+        return $this;
+    }
+
+
 }
