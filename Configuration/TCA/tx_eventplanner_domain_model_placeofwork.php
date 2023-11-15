@@ -101,7 +101,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 4,
-                'eval' => 'int, required',
+                'eval' => 'int, required,'. \Cylancer\Eventplanner\Evaluation\NoNegativeNumbersEvaluation::class,
                 'default' => '0',
             ],
             

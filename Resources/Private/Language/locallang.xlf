@@ -3,7 +3,6 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2020-04-26T10:33:58Z" product-name="eventplanner">
 		<header/>
 		<body>
-				
 			<trans-unit id="eventplanner.description">
 				<source>Description</source>
 			</trans-unit>
