@@ -19,7 +19,7 @@ DOCTYPE html PUBLIC "-//WC//DTD XHTML . Strict//EN" "http://www.w.org/TR/xhtml/D
 					<f:translate key="eventplanner.registerEnd" /> :
 					<f:format.date format="d.m.Y" date="{event.registerEnd}" />
 				</h5>
-				<f:if condition="{event.maxVotes} != 1">
+				<f:if condition="{event.maxVotes} > 0">
 					<h5>
 						<f:translate key="eventplanner.maxVotes" /> : {event.maxVotes}
 					</h5>

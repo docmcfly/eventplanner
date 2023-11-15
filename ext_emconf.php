@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.2.2',
+    'version' => '2.2.3',
     'constraints' => [
         'depends' => [
             'typo3' => '11.5.10-11.5.99',
@@ -25,6 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 ];
 
 /**
+ *  2.2.3 :: Fix :: Small fixes: backend validations / missing title added / unnecessary outputs removed
  *  2.2.2 :: Fix :: Small validate fix.
  *  2.2.1 :: Fix :: Small UI fixes.
  *  2.2.0 :: Add :: You can do hidden votes. You can limit the vote per user.

@@ -1,7 +1,7 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_csh_tx_eventplanner_domain_model_event.xlf:title',
+        'title' => 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_csh_tx_eventplanner_domain_model_event.xlf:name',
         'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -131,7 +131,9 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 4,
-                'eval' => 'int, required'
+                'eval' => 'int, required,'. \Cylancer\Eventplanner\Evaluation\NoNegativeNumbersEvaluation::class,
+                'default' => 0,
+                'min' => 1 
             ]
         ],
         'display_names' => [
@@ -146,6 +148,7 @@ return [
                       1 => '',
                    ]
                 ],
+                'default' => 1
             ]
         ],
         'description' => [
