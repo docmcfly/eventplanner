@@ -1,12 +1,10 @@
 <?php
 use Cylancer\Eventplanner\Controller\EventController;
-use Cylancer\Eventplanner\Evaluation\NoNegativeNumbersEvaluation;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3_MODE') || die('Access denied.');
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals'][NoNegativeNumbersEvaluation::class] = '';
 call_user_func(
     function()
     {
