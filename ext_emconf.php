@@ -14,10 +14,10 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => 0,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '2.2.4',
+    'version' => '3.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.10-11.5.99',
+            'typo3' => '12.4.0-12.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],
@@ -25,6 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 ];
 
 /**
+ *  3.0.0 :: UPD :: Upgrade to TYPO3 12
  *  2.2.4 :: Fix :: Remove useless evaluation class
  *  2.2.3 :: Fix :: Small fixes: backend validations / missing title added / unnecessary outputs removed
  *  2.2.2 :: Fix :: Small validate fix.

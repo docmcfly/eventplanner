@@ -17,7 +17,7 @@
 			</trans-unit>
 
 			<trans-unit id="eventplanner.place.memberCount">
-				<source>Members count</source>
+				<source>Participants count</source>
 				<target state="tanslated">Anzahl</target>
 			</trans-unit>
 			<trans-unit id="eventplanner.place.addMember">
@@ -30,8 +30,8 @@
 			</trans-unit>
 
 			<trans-unit id="eventplanner.error.eventNotFound">
-				<source>Event not found.</source>
-				<target state="tanslated">Veranstaltung nicht gefunden.</target>
+				<source>Event / survey not found.</source>
+				<target state="tanslated">Veranstaltung / Umfrage nicht gefunden.</target>
 			</trans-unit>
 
 		</body>

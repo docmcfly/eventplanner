@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="eventplanner">
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Place of work</source>
-				<target state="tanslated">Einsatzort</target>
+				<source>Option / Place of work</source>
+				<target state="tanslated">Option / Einsatzort</target>
 			</trans-unit>
 			<trans-unit id="name">
-				<source>Place of work</source>
-				<target state="tanslated">Einsatzort</target>
+				<source>Option / Place of work</source>
+				<target state="tanslated">Option / Einsatzort</target>
 			</trans-unit>
 			<trans-unit id="maxMembers">
-				<source>Maximum of members (0 = no limit)</source>
-				<target state="tanslated">Maximale Anzahl an Helfern (0 = keine Limitierung)</target>
+				<source>Maximum of participants (0 = no limit)</source>
+				<target state="tanslated">Maximale Anzahl an Teilnehmer (0 = keine Limitierung)</target>
 			</trans-unit>
 			<trans-unit id="members">
-				<source>Members</source>
-				<target state="tanslated">Helfer</target>
+				<source>Participants</source>
+				<target state="tanslated">Teilnehmer</target>
 			</trans-unit>
 		</body>
 	</file>

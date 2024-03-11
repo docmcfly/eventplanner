@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-04-26T10:33:58Z" product-name="eventplanner">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
 		<header/>
 		<body>
 			<trans-unit id="eventplanner.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="eventplanner.maxVotes">
+				<source>Maximum votes</source>
 			</trans-unit>
 			<trans-unit id="eventplanner.registerEnd">
 				<source>End of registration</source>
 			</trans-unit>
 
 			<trans-unit id="eventplanner.place.memberCount">
-				<source>Members count</source>
+				<source>Participants count</source>
 			</trans-unit>
 			<trans-unit id="eventplanner.place.addMember">
 				<source>I'm in</source>
@@ -21,9 +24,9 @@
 			</trans-unit>
 
 			<trans-unit id="eventplanner.error.eventNotFound">
-				<source>Event not found.</source>
+				<source>Event / survey not found.</source>
 			</trans-unit>
-			
+
 		</body>
 	</file>
 </xliff>
