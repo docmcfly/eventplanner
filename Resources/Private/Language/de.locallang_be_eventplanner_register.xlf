@@ -5,12 +5,12 @@
 		<body>
 
 			<trans-unit id="tx_eventplanner_register.name">
-				<source>Eventplanner</source>
-				<target state="tanslated">Veranstaltungsplanner</target>
+				<source>Eventplanner / survey</source>
+				<target state="tanslated">Veranstaltungsplanner / Umfrage</target>
 			</trans-unit>
 			<trans-unit id="tx_eventplanner_register.description">
-				<source>Frontend users can register for job of the event.</source>
-				<target state="tanslated">Webseitennutzer können sich für Jobs einer Veranstaltung registrieren.</target>
+				<source>Frontend users can register or vote</source>
+				<target state="tanslated">Webseitennutzer können sich registrieren oder abstimmen</target>
 			</trans-unit>
 
 
@@ -19,8 +19,8 @@
 				<target state="tanslated">Allgemein</target>
 			</trans-unit>
 			<trans-unit id="flexforms_general.eventChooser">
-				<source>Event</source>
-				<target state="tanslated">Veranstaltung</target>
+				<source>Event / survey</source>
+				<target state="tanslated">Veranstaltung / Umfrage</target>
 			</trans-unit>
 
 		</body>

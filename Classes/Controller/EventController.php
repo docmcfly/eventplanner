@@ -9,6 +9,7 @@ use Cylancer\Eventplanner\Domain\Model\PlaceOfWork;
 use Cylancer\Eventplanner\Domain\Model\Event;
 use Cylancer\Eventplanner\Domain\Model\ValidationResults;
 use Cylancer\Eventplanner\Services\FrontendUserService;
+use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -63,7 +64,7 @@ class EventController extends ActionController
      * @param PlaceOfWork $placeOfWork
      * @return void
      */
-    public function registerUserAction(PlaceOfWork $placeOfWork):void
+    public function registerUserAction(PlaceOfWork $placeOfWork):ResponseInterface
     {
         if ($placeOfWork != null && $this->frontendUserService->isLogged()) {
             $userId = $this->frontendUserService->getCurrentUserUid();
@@ -77,7 +78,7 @@ class EventController extends ActionController
                 $this->placeOfWorkRepository->update($placeOfWork);
             }
         }
-        $this->redirect('register');
+       return  $this->redirect('register');
     }
 
     /**
@@ -85,7 +86,7 @@ class EventController extends ActionController
      * @param PlaceOfWork $placeOfWork
      * @return void
      */
-    public function deregisterUserAction(PlaceOfWork $placeOfWork): void
+    public function deregisterUserAction(PlaceOfWork $placeOfWork): ResponseInterface
     {
         if ($placeOfWork != null && $this->frontendUserService->isLogged()) {
             $userId = $this->frontendUserService->getCurrentUserUid();
@@ -99,14 +100,14 @@ class EventController extends ActionController
                 $this->placeOfWorkRepository->update($placeOfWork);
             }
         }
-        $this->redirect('register');
+        return $this->redirect('register');
     }
 
     /**
      *
      * @return void
      */
-    public function registerAction(): void
+    public function registerAction(): ResponseInterface
     {
         $userId = $this->frontendUserService->getCurrentUserUid();
         $eventUid = $this->settings['event'];
@@ -136,6 +137,7 @@ class EventController extends ActionController
             $registerActive = $now <= $event->getRegisterEnd();
             $this->view->assign('registerActive', $registerActive);
         }
+        return $this->htmlResponse();
     }
 
     private function validate(?Event $event): ValidationResults

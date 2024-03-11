@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-17T16:38:48Z" product-name="eventplanner">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="eventplanner">
 		<header/>
 		<body>
 			<trans-unit id="title">
-				<source>Place of work</source>
+				<source>Option / Place of work</source>
 			</trans-unit>
 			<trans-unit id="name">
-				<source>Place of work</source>
+				<source>Option / Place of work</source>
 			</trans-unit>
 			<trans-unit id="maxMembers">
-				<source>Maximum of members (0 = no limit)</source>
+				<source>Maximum of participants (0 = no limit)</source>
 			</trans-unit>
 			<trans-unit id="members">
-				<source>Members</source>
+				<source>Participants</source>
 			</trans-unit>
 		</body>
 	</file>
