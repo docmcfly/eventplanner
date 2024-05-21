@@ -12,6 +12,7 @@ return [
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
         'delete' => 'deleted',
+        'hideTable' => true,        
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],

@@ -4,11 +4,11 @@
 		<header/>
 		<body>
 
-  		<trans-unit id="tx_eventplanner_register.name">
-				<source>Eventplanner</source>
+			<trans-unit id="tx_eventplanner_register.name">
+				<source>Eventplanner / survey</source>
 			</trans-unit>
 			<trans-unit id="tx_eventplanner_register.description">
-				<source>Frontend users can register for job of the event.</source>
+				<source>Frontend users can register or vote</source>
 			</trans-unit>
 
 
@@ -16,7 +16,7 @@
 				<source>Base</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.eventChooser">
-				<source>Event</source>
+				<source>Event / survey</source>
 			</trans-unit>
 
 		</body>

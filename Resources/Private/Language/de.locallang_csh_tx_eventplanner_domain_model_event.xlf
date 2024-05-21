@@ -4,24 +4,24 @@
 		<header/>
 		<body>
 			<trans-unit id="name">
-				<source>Event plan</source>
-				<target state="tanslated">Veranstaltungsplaung</target>
+				<source>Event plan / survey</source>
+				<target state="tanslated">Veranstaltungsplaung / Umfrage</target>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>Description</source>
-				<target state="tanslated">Beschreibung der Veranstaltung</target>
+				<target state="tanslated">Beschreibung der Veranstaltung / Umfrage</target>
 			</trans-unit>
 			<trans-unit id="eventCoordinator">
-				<source>Event coordinator</source>
-				<target state="tanslated">Veranstaltungsplaner</target>
+				<source>Coordinator</source>
+				<target state="tanslated">Verantwortlicher</target>
 			</trans-unit>
 			<trans-unit id="registerEnd">
 				<source>Register end time</source>
 				<target state="tanslated">Anmeldeschluss</target>
 			</trans-unit>
 			<trans-unit id="placeOfWork">
-				<source>Place of work</source>
-				<target state="tanslated">Einsatzort</target>
+				<source>Option / Place of work</source>
+				<target state="tanslated">Option / Einsatzort</target>
 			</trans-unit>
 			<trans-unit id="maxVotes">
 				<source>Maximum of votes (0 = unlimitetd)</source>
