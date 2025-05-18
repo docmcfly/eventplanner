@@ -1,6 +1,12 @@
 <?php
 namespace Cylancer\Eventplanner\Services;
 
+use Cylancer\Eventplanner\Domain\Model\FrontendUser;
+use TYPO3\CMS\Core\SingletonInterface;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Context\Context;
+use Cylancer\Eventplanner\Domain\Repository\FrontendUserRepository;
+
 /**
  *
  * This file is part of the "Eventplanner" Extension for TYPO3 CMS.
@@ -8,59 +14,37 @@ namespace Cylancer\Eventplanner\Services;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- * (c) 2022 C. Gogolin <service@cylancer.net> 
+ * (c) 2025 C. Gogolin <service@cylancer.net> 
  * 
- * @package Cylancer\Eventplanner\Services
  */
 
-use TYPO3\CMS\Core\SingletonInterface;
-use TYPO3\CMS\Extbase\Domain\Model\FrontendUser;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Context\Context;
-use Cylancer\Eventplanner\Domain\Repository\FrontendUserRepository;
 
 class FrontendUserService implements SingletonInterface
 {
 
-    /**
-     * @var FrontendUserRepository
-     */
-    private $frontendUserRepository = null;
-
-    
-    public function __construct(FrontendUserRepository $frontendUserRepository)
-    {
-        $this->frontendUserRepository = $frontendUserRepository;
+    public function __construct(
+        private readonly FrontendUserRepository $frontendUserRepository
+    ) {
     }
-    
-    
-    /**
-     *
-     * @return FrontendUser Returns the current frontend user
-     */
-    public function getCurrentUser()
+
+    public function getCurrentUser(): ?FrontendUser
     {
-        if (! $this->isLogged()) {
+        if (!$this->isLogged()) {
             throw new \Exception("User ist not logged");
         }
         return $this->frontendUserRepository->findByUid(FrontendUserService::getCurrentUserUid());
     }
 
-    public function getCurrentUserUid()
+    public function getCurrentUserUid(): int
     {
-        if (! $this->isLogged()) {
+        if (!$this->isLogged()) {
             throw new \Exception("User ist not logged");
         }
         $context = GeneralUtility::makeInstance(Context::class);
         return $context->getPropertyFromAspect('frontend.user', 'id');
     }
 
-    /**
-     * Check if the user is logged
-     *
-     * @return bool
-     */
-    public function isLogged()
+    public function isLogged(): bool
     {
         $context = GeneralUtility::makeInstance(Context::class);
         return $context->getPropertyFromAspect('frontend.user', 'isLoggedIn');

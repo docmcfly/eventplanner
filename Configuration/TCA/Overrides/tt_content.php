@@ -4,22 +4,15 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') || die('Access denied.');
 
-(static function (): void{
+ /**
+ *
+ * This file is part of the "Eventplanner" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * (c) 2025 C. Gogolin <service@cylancer.net> 
+ * 
+ */
 
-    $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['eventplanner_register'] = 'pi_flexform';
-    ExtensionManagementUtility::addPiFlexFormValue(
-        // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
-        'eventplanner_register',
-        // Flexform configuration schema file
-        'FILE:EXT:eventplanner/Configuration/FlexForms/Register.xml'
-    );
-
-
-    ExtensionUtility::registerPlugin(
-        'Eventplanner',
-        'Register',
-        'LLL:EXT:eventplanner/Resources/Private/Language/locallang_be_eventplanner_register.xlf:tx_eventplanner_register.name'
-    );
-
-
-})();
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['eventplanner'] = 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_be.xlf:plugins.group.eventplanner.name';

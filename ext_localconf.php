@@ -1,54 +1,31 @@
 <?php
 use Cylancer\Eventplanner\Controller\EventController;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') || die('Access denied.');
 
-call_user_func(
-    function()
-    {
+/**
+ *
+ * This file is part of the "Eventplanner" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * (c) 2025 C. Gogolin <service@cylancer.net> 
+ * 
+ */
 
-        ExtensionUtility::configurePlugin(
-            'Eventplanner',
-            'Register',
-            [
-               EventController::class => 'register, registerUser, deregisterUser'
-            ],
-            // non-cacheable actions
-            [
-                EventController::class => 'register, registerUser, deregisterUser'
-            ]);
+ExtensionUtility::configurePlugin(
+    'Eventplanner',
+    'Register',
+    [
+        EventController::class => 'register, registerUser, deregisterUser'
 
-    // wizards
-    ExtensionManagementUtility::addPageTSConfig(
-        'mod {
-            wizards.newContentElement.wizardItems.plugins {
-                elements {
-                    register {
-                        iconIdentifier = eventplanner-plugin-register
-                        title = LLL:EXT:eventplanner/Resources/Private/Language/locallang_be_eventplanner_register.xlf:tx_eventplanner_register.name
-                        description = LLL:EXT:eventplanner/Resources/Private/Language/locallang_be_eventplanner_register.xlf:tx_eventplanner_register.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = eventplanner_register
-                        }
-                    }
-                }
-                show = *
-            }
-       }'
-    );
-    $iconRegistry = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
-			$iconRegistry->registerIcon(
-				'eventplanner-plugin-register',
-			    TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:eventplanner/Resources/Public/Icons/user_plugin_register.svg']
-			);
-		
-    }
-
-    
-
+    ],
+    // non-cacheable actions
+    [
+        EventController::class => 'register, registerUser, deregisterUser'
+    ],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
+

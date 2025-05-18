@@ -4,19 +4,23 @@
 		<header/>
 		<body>
 
-			<trans-unit id="tx_eventplanner_register.name">
+			<trans-unit id="plugin.name">
 				<source>Eventplanner / survey</source>
+				<target state="tanslated">Veranstaltungsplanner / Umfrage</target>
 			</trans-unit>
-			<trans-unit id="tx_eventplanner_register.description">
+			<trans-unit id="plugin.description">
 				<source>Frontend users can register or vote</source>
+				<target state="tanslated">Webseitennutzer können sich registrieren oder abstimmen</target>
 			</trans-unit>
 
 
-			<trans-unit id="flexforms_general.tab.general">
-				<source>Base</source>
+			<trans-unit id="flexforms_general.title">
+				<source>Settings</source>
+				<target state="tanslated">Einstellungen</target>
 			</trans-unit>
 			<trans-unit id="flexforms_general.eventChooser">
 				<source>Event / survey</source>
+				<target state="tanslated">Veranstaltung / Umfrage</target>
 			</trans-unit>
 
 		</body>

@@ -1,4 +1,16 @@
 <?php
+
+/**
+ *
+ * This file is part of the "Eventplanner" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * (c) 2025 C. Gogolin <service@cylancer.net> 
+ * 
+ */
+
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:eventplanner/Resources/Private/Language/locallang_csh_tx_eventplanner_domain_model_placeofwork.xlf:title',

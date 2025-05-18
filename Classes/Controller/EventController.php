@@ -19,52 +19,21 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- * (c) 2020 Clemens Gogolin
- * Clemens Gogolin <service@cylancer.net>
+ * (c) 2025 C. Gogolin <service@cylancer.net>
  *
- * @package Cylancer\Eventplanner\Controller
  */
-class EventController extends ActionController 
+
+class EventController extends ActionController
 {
-
-    /**
-     *
-     * @var FrontendUserService
-     */
-    private $frontendUserService = null;
-
-    /**
-     *
-     * @var EventRepository
-     */
-    private $eventRepository = null;
-
-    /**
-     *
-     * @var PlaceOfWorkRepository
-     */
-    private $placeOfWorkRepository = null;
-
-    /**
-     *
-     * @var FrontendUserRepository
-     */
-    private $frontendUserRepository = null;
-
-    public function __construct(FrontendUserRepository $frontendUserRepository, EventRepository $eventRepository, PlaceOfWorkRepository $placeOfWorkRepository, FrontendUserService $frontendUserService)
-    {
-        $this->frontendUserRepository = $frontendUserRepository;
-        $this->eventRepository = $eventRepository;
-        $this->placeOfWorkRepository = $placeOfWorkRepository;
-        $this->frontendUserService = $frontendUserService;
+    public function __construct(
+        private readonly FrontendUserRepository $frontendUserRepository,
+        private readonly EventRepository $eventRepository,
+        private readonly PlaceOfWorkRepository $placeOfWorkRepository,
+        private readonly FrontendUserService $frontendUserService
+    ) {
     }
 
-    /**
-     *
-     * @param PlaceOfWork $placeOfWork
-     * @return void
-     */
-    public function registerUserAction(PlaceOfWork $placeOfWork):ResponseInterface
+    public function registerUserAction(PlaceOfWork $placeOfWork): ResponseInterface
     {
         if ($placeOfWork != null && $this->frontendUserService->isLogged()) {
             $userId = $this->frontendUserService->getCurrentUserUid();
@@ -72,20 +41,15 @@ class EventController extends ActionController
             foreach ($placeOfWork->getMembers() as $member) {
                 $f = $f || $member->getUid() == $userId;
             }
-            if (! $f) {
+            if (!$f) {
                 $user = $this->frontendUserRepository->findByUid($userId);
                 $placeOfWork->addMember($user);
                 $this->placeOfWorkRepository->update($placeOfWork);
             }
         }
-       return  $this->redirect('register');
+        return $this->redirect('register');
     }
 
-    /**
-     *
-     * @param PlaceOfWork $placeOfWork
-     * @return void
-     */
     public function deregisterUserAction(PlaceOfWork $placeOfWork): ResponseInterface
     {
         if ($placeOfWork != null && $this->frontendUserService->isLogged()) {
@@ -103,10 +67,6 @@ class EventController extends ActionController
         return $this->redirect('register');
     }
 
-    /**
-     *
-     * @return void
-     */
     public function registerAction(): ResponseInterface
     {
         $userId = $this->frontendUserService->getCurrentUserUid();
@@ -121,7 +81,7 @@ class EventController extends ActionController
             $this->view->assign('validationResults', $validationResults);
         } else {
             $this->view->assign('event', $event);
-           //  debug($event);
+            //  debug($event);
             $userIsRegisteredIn = array();
             foreach ($event->getPlaceOfWork() as $place) {
                 $members = $place->getMembers();
