@@ -6,21 +6,17 @@
 
 			<trans-unit id="tx_eventplanner_register.name">
 				<source>Eventplanner / survey</source>
-				<target state="tanslated">Veranstaltungsplanner / Umfrage</target>
 			</trans-unit>
 			<trans-unit id="tx_eventplanner_register.description">
 				<source>Frontend users can register or vote</source>
-				<target state="tanslated">Webseitennutzer können sich registrieren oder abstimmen</target>
 			</trans-unit>
 
 
-			<trans-unit id="flexforms_general.tab.general">
-				<source>Base</source>
-				<target state="tanslated">Allgemein</target>
+			<trans-unit id="flexforms_general.title">
+				<source>Settings</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.eventChooser">
 				<source>Event / survey</source>
-				<target state="tanslated">Veranstaltung / Umfrage</target>
 			</trans-unit>
 
 		</body>

@@ -4,7 +4,7 @@
 	"description" : "A small event planner for frontend user. ",
 	"license" : "GPL-2.0-or-later",
 	"require" : {
-		"typo3/cms-core" : "^12.4"
+		"typo3/cms-core" : "^13.4"
 	},
 	"autoload" : {
 		"psr-4" : {
@@ -12,15 +12,15 @@
 		}
 	},
 	"authors" : [{
-			"name" : "Clemens Gogolin",
+			"name" : "C. Gogolin",
 			"email" : "service@cylancer.net",
 			"role" : "developer",
 			"homepage" : "https://github.com/docmcfly/eventplanner"
 		}
 	],
 	"support" : {
-		"issues" : "https://github.com/docmcfly/participants/issues",
-		"source" : "https://github.com/docmcfly/participants/master/loginViaEmail"
+		"issues" : "https://github.com/docmcfly/eventplanner/issues",
+		"source" : "https://github.com/docmcfly/eventplanner"
 	},
 	"extra" : {
 		"typo3/cms" : {

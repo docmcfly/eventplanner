@@ -10,7 +10,6 @@ namespace Cylancer\Eventplanner\Domain\Repository;
  *
  * (c) 2022 C. Gogolin <service@cylancer.net>
  *
- * @package Cylancer\Eventplanner\Domain\Repository
  */
 
 use TYPO3\CMS\Extbase\Persistence\Repository;

@@ -17,12 +17,6 @@ plugin.tx_eventplanner {
 
 	}
 }
-	
-config.tx_extbase.persistence.classes {
- Tx_Extbase_Domain_Model_FrontendUser {
-  mapping.recordType >
- }
-}
 
  
 

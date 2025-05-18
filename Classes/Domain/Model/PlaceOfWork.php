@@ -8,7 +8,7 @@ namespace Cylancer\Eventplanner\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2022 Clemens Gogolin <service@cylancer.net>
+ *  (c) 2025 C. Gogolin <service@cylancer.net>
  *  
  *  @package Cylancer\Eventplanner\Domain\Model
  *  
@@ -20,26 +20,12 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class PlaceOfWork extends AbstractEntity
 {
 
-    /**
-     * 
-     * @var string
-     */
-    protected $name = '';
+    protected ?string $name = '';
 
-    /**
-     * 
-     * @var int
-     */
-    protected $maxMembers = 0;
+    protected int $maxMembers = 0;
 
-    /**
-     * 
-     * @var ObjectStorage<FrontendUser>
-     */
-    protected $members = null;
-
-
-
+    /** @var ObjectStorage<FrontendUser> */
+    protected ObjectStorage $members;
 
     /**
      * __construct
@@ -64,75 +50,36 @@ class PlaceOfWork extends AbstractEntity
         $this->members = new ObjectStorage();
     }
 
-    /**
-     * Returns the name
-     * 
-     * @return string name
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * Sets the name
-     * 
-     * @param string $name
-     * @return void
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * Returns the maxMembers
-     * 
-     * @return int maxMembers
-     */
     public function getMaxMembers(): int
     {
         return $this->maxMembers;
     }
 
-    /**
-     * Sets the maxMembers
-     * 
-     * @param int $maxMembers
-     * @return void
-     */
     public function setMaxMembers(int $maxMembers): void
     {
         $this->maxMembers = $maxMembers;
     }
 
-    /**
-     * Adds a FrontendUser
-     * 
-     * @param FrontendUser $member
-     * @return void
-     */
     public function addMember(FrontendUser $member): void
     {
         $this->members->attach($member);
     }
 
-    /**
-     * Removes a FrontendUser
-     * 
-     * @param FrontendUser $memberToRemove The FrontendUser to be removed
-     * @return void
-     */
     public function removeMember(FrontendUser $memberToRemove): void
     {
         $this->members->detach($memberToRemove);
     }
 
-    /**
-     * Returns the members
-     * 
-     * @return ObjectStorage<FrontendUser> members
-     */
     public function getMembers(): ObjectStorage
     {
         return $this->members;

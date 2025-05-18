@@ -10,114 +10,59 @@ namespace Cylancer\Eventplanner\Domain\Model;
  *
  * (c) 2022 C. Gogolin <service@cylancer.net>
  *
- * @package Cylancer\Eventplanner\Domain\Model
- * 
  */
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 class FrontendUser extends AbstractEntity
 {
-    
-    /**
-     * @var string
-     */
-    protected $name = '';
-    
-    /**
-     * @var string
-     */
-    protected $firstName = '';
-    
-    /**
-     * @var string
-     */
-    protected $lastName = '';
-    
-    /**
-     * @var string
-     */
-    protected $username = '';
-    
-    /**
-     * Sets the name value
-     *
-     * @param string $name
-     * @return void
-     */
-    public function setName(String $name):void
+
+    protected ?string $name = '';
+
+    protected ?string $firstName = '';
+
+    protected ?string $lastName = '';
+
+    protected string $username = '';
+
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
-    
-    /**
-     * Returns the name value
-     *
-     * @return string
-     */
-    public function getName():String
+
+    public function getName(): string
     {
         return $this->name;
     }
-    
-    /**
-     * Sets the firstName value
-     *
-     * @param string $firstName
-     * @return void
-     */
-    public function setFirstName(String $firstName):void
+
+    public function setFirstName(string $firstName): void
     {
         $this->firstName = $firstName;
     }
-    
-    /**
-     * Returns the firstName value
-     *
-     * @return string
-     */
-    public function getFirstName():?String
+
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
-    
-    /**
-     * Sets the lastName value
-     *
-     * @param string $lastName
-     * @return void
-     */
-    public function setLastName($lastName):void
+
+    public function setLastName($lastName): void
     {
         $this->lastName = $lastName;
     }
-    
-    /**
-     * Returns the lastName value
-     *
-     * @return string
-     */
-    public function getLastName():String
+
+    public function getLastName(): string
     {
         return $this->lastName;
     }
-    /**
-     * @return string
-     */
-    public function getUsername():String
+
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    /**
-     * @param string $username
-     * @return void 
-     */
-    public function setUsername(String $username):void
+    public function setUsername(string $username): void
     {
         $this->username = $username;
     }
 
-     
- 
 }
